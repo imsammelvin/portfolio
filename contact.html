@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Melvin</title>
+    <!---icons---->
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--nav-bar-->
+    <header>
+        <nav class="nav-bar">
+            <div class="logo"><a href="index.html">SAM <br> MELVIN</a></div>
+
+            <input type="checkbox" id="active">
+            <label for="active" class="menu-btn"><span></span></label>
+            <label for="active" class="close"></label>
+            
+            <div class="nav-links">
+                
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            
+            </div>
+        </nav>
+    </header>
+    
+
+        <section>
+
+            <div class="buy-me-drink">
+                <p class="text-3"><b>BUY ME DRINK</b></p> <br>
+            </div>
+
+            <div class="contact">
+                <div class="contact-form">
+                    <form onsubmit="sendEmail(); reset(); return false"> 
+                        <label for="name" class="text-6">Name</label>
+                        <input type="text" id="name" name="name" required> <br><br>
+                        <label for="email" class="text-6">Email</label>
+                        <input type="email" id="email" name="email" required> <br><br>
+                        <p class="message"><label for="message" class="text-6">Message</label>
+                        <textarea name="message" id="message" cols="20" rows="5"></textarea> <br><br></p>
+                        <p class="text-5"><button type="submit">SEND</button></p>
+                    </form>
+                </div>
+    
+                <div class="contact-detail">
+                    <p class="text-3">CONTACT DETAILS</p>
+                    <div class="email-phone">
+                        <p class="text-5">Email: &nbsp;&nbsp;&nbsp;&nbsp; <span class="span">sammelvin2232002@gmail.com</span></p> <br>
+                        <p class="text-5">Phone: &nbsp;&nbsp;+91 7010952077</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+    <footer>
+        <div class="bottom-icons">
+            <div class="bw">
+                <a href="https://github.com/imsammelvin"><img src="icons/github.svg"/></a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="https://www.instagram.com/lil._x_sam/"><img src="icons/instagram.svg"/></a>
+                <a href="https://twitter.com/SAMMELVIN20"><img src="icons/twitter.svg"/></a>
+                <a href="https://www.facebook.com/profile.php?id=100077391917361"><img src="icons/facebook.svg"/></a>
+            </div>
+        </div>
+    </footer>
+    
+    <img src="icons/contact-overlay.svg" alt="overlay" class="contact-overlay">
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "sammelvin2232002@gmail.com",
+                Password : "lraffgegyluuzuqh",
+                To : 'businesswolfscontact@gmail.com',
+                From : document.getElementById('email').value,
+                Subject : "This message is from portfolio website",
+                Body : "<b> Name: " + document.getElementById('name').value + "</b>"
+                    + "<br> <b> Email: " + document.getElementById('email').value + "</b>"
+                    + "<br> <b> Message: " + document.getElementById('message').value + "</b>"
+            }).then(
+            message => alert("Message sent successfully.")
+            );
+        }
+    </script>
+
+</body>
+</html>
