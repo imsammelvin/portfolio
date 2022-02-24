@@ -1,0 +1,56 @@
+/***************HOME************/
+:root {
+    --animate-delay: 0.3s;
+  }
+
+.ani-img-1{
+    animation: img-1 600ms ease;
+}
+
+@keyframes img-1 {
+    0%{
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+
+
+
+/***************ABOUT************/
+
+.sam-img-2{
+    animation: img-2 600ms ease;
+}
+
+@keyframes img-2 {
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.content-about{
+    animation: about-content 700ms ease;
+}
+
+@keyframes about-content {
+    0%{
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
